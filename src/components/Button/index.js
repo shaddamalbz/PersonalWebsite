@@ -41,7 +41,7 @@ export default function Button(props) {
 
   return (
     <button
-      className={`py-1.5 px-5 ${className.join(" ")}`}
+      className={`py-1.5 px-6 ${className.join(" ")}`}
       onClick={onClick}
       style={props.style}
     >
