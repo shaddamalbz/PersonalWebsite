@@ -12,10 +12,10 @@ export default function Hero() {
   return (
     <section className="w-full mb-16">
       <div
-        className="sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-1 xl:px-2"
-        style={{ height: "420px" }}
+        className="sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-2"
+        style={{ minHeight: "420px" }}
       >
-        <div className="h-full flex justify-between items-center">
+        <div className="h-full flex flex-wrap-reverse lg:flex-nowrap justify-center lg:justify-between items-center">
           <div>
             <figure className="mb-4">
               <img src={Indonesia} alt="Indonesia Flag" />
@@ -29,12 +29,15 @@ export default function Hero() {
               Hire Me
             </Button>
           </div>
-          <div className="mr-12">
+          <div className="mr-0 sm:mr-12">
             <div className="flex" style={{ height: "380px" }}>
-              <figure className="z-10" style={{ height: "320px" }}>
+              <figure className="z-10" style={{ maxHeight: "320px" }}>
                 <img src={HeroCat} alt="Cat" className="h-full object-cover" />
               </figure>
-              <figure className="-ml-40 mt-24 z-0" style={{ height: "260px" }}>
+              <figure
+                className="-ml-40 mt-24 z-0"
+                style={{ maxHeight: "260px" }}
+              >
                 <img src={HeroBg} alt="Cat" className="h-full object-cover" />
               </figure>
             </div>

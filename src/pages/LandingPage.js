@@ -4,6 +4,7 @@ import React, { Component } from "react";
 import Header from "parts/Header";
 import Hero from "parts/Hero";
 import Skill from "parts/Skill";
+import Banner from "parts/Banner";
 import Footer from "parts/Footer";
 
 export default class LandingPage extends Component {
@@ -17,6 +18,7 @@ export default class LandingPage extends Component {
         <Header />
         <Hero />
         <Skill />
+        <Banner />
         <Footer />
       </>
     );

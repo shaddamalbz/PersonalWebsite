@@ -6,6 +6,7 @@ export default function Button(props) {
   const className = [props.className];
 
   if (props.isPrimary) className.push("bg-blue text-white");
+  if (props.isSecondary) className.push("bg-pink text-gray-500");
   if (props.isRounded) className.push("rounded-xl");
   if (props.hasShadow) className.push("shadow");
 
@@ -57,6 +58,7 @@ Button.propTypes = {
   href: propTypes.string,
   className: propTypes.string,
   isPrimary: propTypes.bool,
+  isSecondary: propTypes.bool,
   isRounded: propTypes.bool,
   isExternal: propTypes.bool,
   hasShadow: propTypes.bool,
