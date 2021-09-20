@@ -15,7 +15,7 @@ export default function Header() {
   if (width <= 1024)
     return (
       <header className="w-full h-20 shadow-sm">
-        <div className="h-full sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-2">
+        <div className="h-full sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-0">
           <nav className="h-full flex justify-between items-center text-lg">
             <div className="flex items-center">
               <p className="font-bold text-blue z-10">Shaddam</p>

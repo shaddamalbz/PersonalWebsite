@@ -12,15 +12,15 @@ export default function Hero() {
   return (
     <section className="w-full mb-16">
       <div
-        className="sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-2"
+        className="sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-0"
         style={{ minHeight: "420px" }}
       >
-        <div className="h-full flex flex-wrap-reverse lg:flex-nowrap justify-center lg:justify-between items-center">
-          <div>
-            <figure className="mb-4">
+        <div className="h-full flex flex-wrap-reverse md:flex-nowrap justify-center md:justify-between items-center">
+          <div className="text-center md:text-left">
+            <figure className="mb-4 hidden md:block">
               <img src={Indonesia} alt="Indonesia Flag" />
             </figure>
-            <h3 className="text-4xl  font-bold mb-4">Hy! I am</h3>
+            <h3 className="text-4xl font-bold mb-4">Hy! I am</h3>
             <h3 className="text-4xl text-blue font-bold mb-4">
               Shaddam Alghafiqih Bazdha
             </h3>
