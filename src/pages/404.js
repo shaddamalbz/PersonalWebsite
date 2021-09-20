@@ -14,7 +14,7 @@ export default class NotFound extends Component {
     return (
       <>
         <Header />
-        <div className="flex flex-col items-center justify-center lg:mx-48 lg:px-2 lg:my-8">
+        <div className="flex flex-col items-center justify-center sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-0 mt-10">
           <figure className="mb-2" style={{ height: "360px" }}>
             <img
               className="h-full object-cover"
@@ -22,7 +22,7 @@ export default class NotFound extends Component {
               alt="Cat Sad"
             />
           </figure>
-          <h3 className="text-5xl font-semibold mb-2">
+          <h3 className="text-4xl font-semibold mb-2">
             404 Not Found <span className="text-blue">Meow</span>
           </h3>
           <p className="text-xl mb-2">you on wrong pages meow</p>

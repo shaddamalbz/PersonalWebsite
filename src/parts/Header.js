@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
@@ -21,12 +22,12 @@ export default function Header() {
         <div className="h-full sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-0">
           <nav className="h-full">
             <div className="h-full flex justify-between items-center text-lg">
-              <div className="flex items-center">
+              <Link to="/" className="flex items-center">
                 <p className="font-bold text-blue z-10">Shaddam</p>
                 <figure className="-ml-4 z-0">
                   <img src={BrandIconBg} alt="Blob" />
                 </figure>
-              </div>
+              </Link>
               <span
                 className="text-blue text-2xl cursor-pointer"
                 onClick={() => setIsOpen(!isOpen)}
@@ -42,13 +43,18 @@ export default function Header() {
               className={`${
                 !isOpen
                   ? "hidden"
-                  : "bg-gray-50 flex flex-col items-center relative z-50 text-blue py-4 rounded-xl shadow-md mt-4"
+                  : "bg-gray-50 flex flex-col items-center relative z-50 text-blue py-6 rounded-xl shadow-md mt-4"
               }`}
             >
-              <li className="py-2">Home</li>
-              <li className="py-2">About Me</li>
-              <li className="py-2">Portofolio</li>
-              <li className="py-2">Blog</li>
+              <li className="py-2">
+                <Link to="about">About Me</Link>
+              </li>
+              <li className="py-2">
+                <Link to="about">Portofolio</Link>
+              </li>
+              <li className="py-2">
+                <Link to="about">Blog</Link>
+              </li>
               <li>
                 <Button type="button" isPrimary isRounded hasShadow>
                   Contact Me
@@ -70,17 +76,22 @@ export default function Header() {
     <header className="w-full h-20 shadow-sm mb-16">
       <div className="h-full sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-2">
         <nav className="h-full flex justify-between items-center text-lg">
-          <div className="flex items-center">
+          <Link to="/" className="flex items-center">
             <p className="font-bold text-blue z-10">Shaddam</p>
             <figure className="-ml-4 z-0">
               <img src={BrandIconBg} alt="Blob" />
             </figure>
-          </div>
+          </Link>
           <ul className="flex items-center ">
-            <li className="mr-9">Home</li>
-            <li className="mr-9">About Me</li>
-            <li className="mr-9">Portofolio</li>
-            <li className="mr-9">Blog</li>
+            <li className="mr-9">
+              <Link to="about">About Me</Link>
+            </li>
+            <li className="mr-9">
+              <Link to="about">Portofolio</Link>
+            </li>
+            <li className="mr-9">
+              <Link to="about">Blog</Link>
+            </li>
             <li>
               <Button type="button" isPrimary isRounded hasShadow>
                 Contact Me
