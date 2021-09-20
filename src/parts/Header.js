@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // Components
 import Button from "components/Button";
@@ -11,6 +11,9 @@ import useWindowDimension from "utils/WindowDimension";
 
 export default function Header() {
   const { width } = useWindowDimension();
+  const [isOpen, setIsOpen] = useState(false);
+
+  console.log(isOpen);
 
   if (width <= 1024)
     return (
@@ -23,8 +26,11 @@ export default function Header() {
                 <img src={BrandIconBg} alt="Blob" />
               </figure>
             </div>
-            <span className="text-blue text-2xl">
-              <i className="fas fa-bars"></i>
+            <span
+              className="text-blue text-2xl cursor-pointer"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              <i className={!isOpen ? "fas fa-bars" : "fas fa-times"}></i>
             </span>
           </nav>
         </div>
