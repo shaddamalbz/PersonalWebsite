@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 
 // Components
 import Button from "components/Button";
@@ -30,7 +32,11 @@ export default function Header() {
               className="text-blue text-2xl cursor-pointer"
               onClick={() => setIsOpen(!isOpen)}
             >
-              <i className={!isOpen ? "fas fa-bars" : "fas fa-times"}></i>
+              {!isOpen ? (
+                <FontAwesomeIcon icon={faBars} />
+              ) : (
+                <FontAwesomeIcon icon={faTimes} />
+              )}
             </span>
           </nav>
         </div>
