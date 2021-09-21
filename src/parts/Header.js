@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+import { Fade } from "react-awesome-reveal";
 
 // Components
 import Button from "components/Button";
@@ -39,35 +40,37 @@ export default function Header() {
                 )}
               </span>
             </div>
-            <ul
-              className={`${
-                !isOpen
-                  ? "hidden"
-                  : "bg-gray-50 flex flex-col items-center relative z-50 text-blue py-6 rounded-xl shadow-md mt-4"
-              }`}
-            >
-              <li className="py-2">
-                <Link to="about">About Me</Link>
-              </li>
-              <li className="py-2">
-                <Link to="about">Portofolio</Link>
-              </li>
-              <li className="py-2">
-                <Link to="about">Blog</Link>
-              </li>
-              <li>
-                <Button type="button" isPrimary isRounded hasShadow>
-                  Contact Me
-                </Button>
-              </li>
-            </ul>
+            {isOpen && (
+              <Fade className="relative z-50" direction="down" delay={100}>
+                <div>
+                  <ul className="flex flex-col items-center text-blue rounded-xl shadow-md mt-4 py-6 bg-white">
+                    <li className="py-2">
+                      <Link to="about">About Me</Link>
+                    </li>
+                    <li className="py-2">
+                      <Link to="about">Portofolio</Link>
+                    </li>
+                    <li className="py-2">
+                      <Link to="about">Blog</Link>
+                    </li>
+                    <li>
+                      <Button type="button" isPrimary isRounded hasShadow>
+                        Contact Me
+                      </Button>
+                    </li>
+                  </ul>
+                </div>
+              </Fade>
+            )}
           </nav>
         </div>
         {isOpen && (
-          <div
-            className="relative bg-black opacity-50 z-40"
-            style={{ minHeight: `calc(100vh - 5rem)` }}
-          ></div>
+          <Fade className="relative z-40" delay={100}>
+            <div
+              className=" bg-black opacity-50 "
+              style={{ minHeight: `calc(100vh - 5rem)` }}
+            ></div>
+          </Fade>
         )}
       </header>
     );

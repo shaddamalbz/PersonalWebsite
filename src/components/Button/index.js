@@ -42,7 +42,9 @@ export default function Button(props) {
 
   return (
     <button
-      className={`py-1.5 px-6 ${className.join(" ")}`}
+      className={`py-1.5 px-6 transition duration-500 ease-in-out transform hover:-translate-y-2 ${className.join(
+        " "
+      )}`}
       onClick={onClick}
       style={props.style}
     >

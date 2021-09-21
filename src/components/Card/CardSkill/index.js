@@ -4,7 +4,10 @@ export default function index(props) {
   const { image, caption } = props;
 
   return (
-    <div className="w-full rounded-xl shadow-lg" style={{ height: "135px" }}>
+    <div
+      className="w-full rounded-xl shadow-lg transition duration-500 ease-in-out transform hover:-translate-y-5"
+      style={{ height: "135px" }}
+    >
       <figure className="h-full pt-4 pb-6">
         <figcaption className="text-lg text-center font-bold ">
           {caption}
