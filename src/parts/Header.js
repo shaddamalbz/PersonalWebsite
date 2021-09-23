@@ -48,10 +48,10 @@ export default function Header() {
                       <Link to="about">About Me</Link>
                     </li>
                     <li className="py-2">
-                      <Link to="about">Portofolio</Link>
+                      <Link to="portofolio">Portofolio</Link>
                     </li>
                     <li className="py-2">
-                      <Link to="about">Blog</Link>
+                      <Link to="blog">Blog</Link>
                     </li>
                     <li>
                       <Button type="button" isPrimary isRounded hasShadow>
@@ -90,10 +90,10 @@ export default function Header() {
               <Link to="about">About Me</Link>
             </li>
             <li className="mr-9">
-              <Link to="about">Portofolio</Link>
+              <Link to="portofolio">Portofolio</Link>
             </li>
             <li className="mr-9">
-              <Link to="about">Blog</Link>
+              <Link to="blog">Blog</Link>
             </li>
             <li>
               <Button type="button" isPrimary isRounded hasShadow>

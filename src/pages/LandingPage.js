@@ -9,7 +9,7 @@ import Footer from "parts/Footer";
 
 export default class LandingPage extends Component {
   componentDidMount() {
-    document.title = "Shaddamalbz | Personal Website";
+    document.title = "Shaddam Alghafiqih";
   }
 
   render() {
