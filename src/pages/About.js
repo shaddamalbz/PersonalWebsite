@@ -14,7 +14,7 @@ export default class About extends Component {
   render() {
     return (
       <>
-        <Header />
+        <Header path="about" />
         <div className="sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-0">
           <Bio />
           <Resume />

@@ -13,9 +13,11 @@ import BrandIconBg from "assets/images/BrandIconBG.svg";
 // utils
 import useWindowDimension from "utils/WindowDimension";
 
-export default function Header() {
+export default function Header({ path }) {
   const { width } = useWindowDimension();
   const [isOpen, setIsOpen] = useState(false);
+
+  console.log(path);
 
   if (width <= 1024)
     return (
@@ -45,7 +47,7 @@ export default function Header() {
                 <div>
                   <ul className="flex flex-col items-center text-blue rounded-xl shadow-md mt-4 py-6 bg-white">
                     <li className="py-2">
-                      <Link to="about">About Me</Link>
+                      <Link to="about">About</Link>
                     </li>
                     <li className="py-2">
                       <Link to="portofolio">Portofolio</Link>
@@ -87,13 +89,30 @@ export default function Header() {
           </Link>
           <ul className="flex items-center ">
             <li className="mr-9">
-              <Link to="about">About Me</Link>
+              <Link
+                className={path === "about" ? "border-b-2 border-blue " : ""}
+                to="about"
+              >
+                About
+              </Link>
             </li>
             <li className="mr-9">
-              <Link to="portofolio">Portofolio</Link>
+              <Link
+                className={
+                  path === "portofolio" ? "border-b-2 border-blue " : ""
+                }
+                to="portofolio"
+              >
+                Portofolio
+              </Link>
             </li>
             <li className="mr-9">
-              <Link to="blog">Blog</Link>
+              <Link
+                className={path === "blog" ? "border-b-2 border-blue " : ""}
+                to="blog"
+              >
+                Blog
+              </Link>
             </li>
             <li>
               <Button type="button" isPrimary isRounded hasShadow>
