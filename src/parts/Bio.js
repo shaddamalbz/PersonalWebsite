@@ -9,10 +9,10 @@ import mail from "assets/icons/mail.svg";
 export default function Bio() {
   return (
     <div
-      className="flex justify-evenly item-center mb-16"
+      className="flex flex-col lg:flex-row justify-evenly item-center mb-16"
       style={{ minHeight: "240px" }}
     >
-      <div className="flex flex-col items-center justify-center mx-auto">
+      <div className="flex flex-col items-center justify-center mx-auto mb-8 lg:mb-0">
         <figure className="rounded-full h-24 w-24 bg-gray-500 mb-2">
           <img
             src={pasFoto}
@@ -20,8 +20,10 @@ export default function Bio() {
             className="h-full object-cove rounded-full"
           />
         </figure>
-        <h3 className="mb-2 font-bold text-lg">Shaddam Alghafiqih Bazdha</h3>
-        <p>Jambi, Indonesia</p>
+        <h3 className="mb-2 font-bold text-lg text-center">
+          Shaddam Alghafiqih Bazdha
+        </h3>
+        <p className="text-center">Jambi, Indonesia</p>
       </div>
       <div style={{ maxWidth: "600px" }}>
         <h3 className="text-3xl font-bold mb-4">About</h3>
