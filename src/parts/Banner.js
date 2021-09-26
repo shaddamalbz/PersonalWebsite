@@ -9,7 +9,7 @@ import bannerVector from "assets/images/banner_vector.svg";
 
 export default function Banner() {
   return (
-    <Fade direction="down" delay={250}>
+    <Fade direction="up" delay={150} triggerOnce="true">
       <section className="w-full mb-16 ">
         <div className="sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-0">
           <div className="bg-blue rounded-xl" style={{ height: "285px" }}>

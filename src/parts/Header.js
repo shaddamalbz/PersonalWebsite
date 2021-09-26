@@ -43,7 +43,7 @@ export default function Header({ path }) {
               </span>
             </div>
             {isOpen && (
-              <Fade className="relative z-50" direction="down" delay={100}>
+              <Fade className="relative z-50" direction="down" delay={50}>
                 <div>
                   <ul className="flex flex-col items-center text-blue rounded-xl shadow-md mt-4 py-6 bg-white">
                     <li className="py-2">

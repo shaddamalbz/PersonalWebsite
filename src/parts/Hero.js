@@ -11,7 +11,7 @@ import HeroBg from "assets/images/hero_bg.svg";
 
 export default function Hero() {
   return (
-    <Fade direction="down" delay={150}>
+    <Fade direction="up" delay={150} triggerOnce="true">
       <section className="w-full mb-16 ">
         <div
           className="sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-0"

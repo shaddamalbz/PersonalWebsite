@@ -1,5 +1,6 @@
 import React from "react";
 import htmlParser from "react-html-parser";
+import { Fade } from "react-awesome-reveal";
 
 // Components
 import Timeline from "components/Timeline";
@@ -57,7 +58,7 @@ export default function Resume() {
   ];
 
   return (
-    <>
+    <Fade direction="up" triggerOnce="true">
       <div className="border-b-2 border-gray-200 pb-8 mb-16">
         <h3 className="text-3xl text-center font-bold mb-6">Work Experince</h3>
         {works.map((work, index) => {
@@ -102,6 +103,6 @@ export default function Resume() {
           );
         })}
       </div>
-    </>
+    </Fade>
   );
 }

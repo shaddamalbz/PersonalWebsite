@@ -41,7 +41,7 @@ export default function Skill() {
   ];
 
   return (
-    <Zoom>
+    <Zoom triggerOnce="true">
       <section className="w-full mb-16" style={{ minHeight: "250px" }}>
         <div className="h-full sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-2">
           <h3 className="text-4xl text-center md:text-left">Skills</h3>
@@ -53,7 +53,7 @@ export default function Skill() {
             {skills.map((skill, index) => {
               return (
                 <div className="col-span-2" key={index}>
-                  <Fade direction="down" delay={index * 150}>
+                  <Fade direction="up" delay={index * 100} triggerOnce="true">
                     <CardSkill image={skill.image} caption={skill.caption} />
                   </Fade>
                 </div>
