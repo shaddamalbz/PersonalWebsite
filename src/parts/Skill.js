@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade, Zoom } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 
 // Components
 import CardSkill from "components/Card/CardSkill";
@@ -41,12 +41,13 @@ export default function Skill() {
   ];
 
   return (
-    <Zoom triggerOnce="true">
+    <Fade direction="up" triggerOnce="true">
       <section className="w-full mb-16" style={{ minHeight: "250px" }}>
         <div className="h-full sm:mx-6 md:mx-12 lg:mx-24 xl:mx-48 px-4 xl:px-2">
-          <h3 className="text-4xl text-center md:text-left">Skills</h3>
-          <span className="w-20 h-1 border-b-2 border-blue"></span>
-          <p className="text-lg text-gray-400 mb-5 text-center md:text-left">
+          <span className="text-4xl text-center md:text-left border-b-2 border-blue">
+            Skills
+          </span>
+          <p className="text-lg text-gray-400 mb-5 text-center md:text-left mt-2">
             Here are most commonly skillset i used for develop website
           </p>
           <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-12 gap-5">
@@ -62,6 +63,6 @@ export default function Skill() {
           </div>
         </div>
       </section>
-    </Zoom>
+    </Fade>
   );
 }

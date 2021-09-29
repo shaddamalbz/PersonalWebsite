@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function index(props) {
+export default function CardSkill(props) {
   const { image, caption } = props;
 
   return (
@@ -16,7 +16,7 @@ export default function index(props) {
           src={image}
           alt={caption}
           className="object-cover mx-auto"
-          width="60"
+          width="60px"
         />
       </figure>
     </div>

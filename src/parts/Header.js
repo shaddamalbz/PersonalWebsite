@@ -49,12 +49,6 @@ export default function Header({ path }) {
                     <li className="py-2">
                       <Link to="about">About</Link>
                     </li>
-                    <li className="py-2">
-                      <Link to="portofolio">Portofolio</Link>
-                    </li>
-                    <li className="py-2">
-                      <Link to="blog">Blog</Link>
-                    </li>
                     <li>
                       <Button type="button" isPrimary isRounded hasShadow>
                         Contact Me
@@ -94,24 +88,6 @@ export default function Header({ path }) {
                 to="about"
               >
                 About
-              </Link>
-            </li>
-            <li className="mr-9">
-              <Link
-                className={
-                  path === "portofolio" ? "border-b-2 border-blue " : ""
-                }
-                to="portofolio"
-              >
-                Portofolio
-              </Link>
-            </li>
-            <li className="mr-9">
-              <Link
-                className={path === "blog" ? "border-b-2 border-blue " : ""}
-                to="blog"
-              >
-                Blog
               </Link>
             </li>
             <li>
